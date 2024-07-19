@@ -9,6 +9,7 @@
 额外的，
 - 添加全部文件：`git add .`
 - 只添加已存在的文件：`git add -u`
+- 删除git管理但不删除本地文件：`git rm --cached <file_name>`
 
 </br>
 

@@ -1249,6 +1249,9 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <p style="color:#EC407A; font-weight:bold">3. 代码实现</p>
 <details>
 <summary><span style="color:#009688; font-weight:bold">点击展开查看Word2Vec完整代码</span></summary>
+<ol>
+<li><strong>简单语料</strong></li>
+</ol>
 <pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> gensim<span class="token punctuation">.</span>models <span class="token keyword keyword-import">import</span> Word2Vec
 
 <span class="token comment"># 示例语料</span>
@@ -1304,6 +1307,42 @@ CBOW_word_vectors <span class="token operator">=</span> cbow_model<span class="t
   3.34811688e-04  6.51462236e-03 -7.45060900e-03  1.82248317e-02
   8.40980443e-04 -8.54207668e-03]
 0.098765165
+</code></pre><ol start="2">
+<li><strong>实际数据</strong></li>
+</ol>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> re
+<span class="token keyword keyword-from">from</span> gensim<span class="token punctuation">.</span>models <span class="token keyword keyword-import">import</span> Word2Vec
+<span class="token keyword keyword-from">from</span> easier_excel <span class="token keyword keyword-import">import</span> read_data
+
+read_data<span class="token punctuation">.</span>set_pd_option<span class="token punctuation">(</span><span class="token punctuation">)</span>
+raw_df <span class="token operator">=</span> read_data<span class="token punctuation">.</span>read_df<span class="token punctuation">(</span>path<span class="token operator">=</span><span class="token string">"data/ag_news/dataset/train.csv"</span><span class="token punctuation">)</span>
+<span class="token comment"># 对rar_df的第三列（新闻内容）逐行进行处理并添加到列表里</span>
+text_list <span class="token operator">=</span> <span class="token punctuation">[</span>row<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token keyword keyword-for">for</span> row <span class="token keyword keyword-in">in</span> raw_df<span class="token punctuation">.</span>values<span class="token punctuation">]</span>
+<span class="token comment"># 对text_list的每个元素进行处理：去掉非字母字符，转小写，然后分割为单词列表</span>
+<span class="token keyword keyword-for">for</span> i<span class="token punctuation">,</span> text <span class="token keyword keyword-in">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>text_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    text <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">'[^A-Za-z]+'</span><span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    text_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> text<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 使用word2vec训练词向量</span>
+path <span class="token operator">=</span> <span class="token string">"../model/word2vec/ag_news_word2vec.model"</span>
+model <span class="token operator">=</span> Word2Vec<span class="token punctuation">(</span>sentences<span class="token operator">=</span>text_list<span class="token punctuation">,</span> vector_size<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> window<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> min_count<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> workers<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>save<span class="token punctuation">(</span>path<span class="token punctuation">)</span>  <span class="token comment"># 保存模型</span>
+model <span class="token operator">=</span> Word2Vec<span class="token punctuation">.</span>load<span class="token punctuation">(</span>path<span class="token punctuation">)</span>  <span class="token comment"># 加载模型</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"词向量矩阵的形状:"</span><span class="token punctuation">,</span> model<span class="token punctuation">.</span>wv<span class="token punctuation">.</span>vectors<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"nice的相似词:"</span><span class="token punctuation">,</span> model<span class="token punctuation">.</span>wv<span class="token punctuation">.</span>most_similar<span class="token punctuation">(</span><span class="token string">"nice"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"寻找不同词:"</span><span class="token punctuation">,</span> model<span class="token punctuation">.</span>wv<span class="token punctuation">.</span>doesnt_match<span class="token punctuation">(</span><span class="token string">"good nice terrible"</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"获取相似度:"</span><span class="token punctuation">,</span> model<span class="token punctuation">.</span>wv<span class="token punctuation">.</span>similarity<span class="token punctuation">(</span><span class="token string">"happy"</span><span class="token punctuation">,</span> <span class="token string">"excited"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># # 获取词向量</span>
+<span class="token comment"># print(model.wv['good'])</span>
+<span class="token comment"># # 获取所有词</span>
+<span class="token comment"># print(model.wv.index_to_key)</span>
+<span class="token comment"># # 获取词向量矩阵</span>
+<span class="token comment"># print(model.wv.vectors)</span>
+</code></pre><p>输出：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>词向量矩阵的形状: (23777, 100)
+nice的相似词: [('happy', 0.8072608709335327), ('pretty', 0.7431333065032959), ('simple', 0.7430432438850403), ('feeling', 0.7355679273605347), ('lucky', 0.7346422672271729), ('always', 0.7252234220504761), ('quite', 0.7218983173370361), ('true', 0.7208051085472107), ('simply', 0.7169813513755798), ('favre', 0.7106463313102722)]
+寻找不同词: terrible
+获取相似度: 0.6986826
 </code></pre></details>
 <p style="color:#EC407A; font-weight:bold">4. Word2Vec的问题</p>
 <ul>
@@ -1548,7 +1587,7 @@ SENet引入双塔模型可以<strong>凸显</strong>那些对高层User Embeddin
 <tr>
 <td>Batch内随机选择负例</td>
 <td>增强了负例的多样性，有利于模型训练</td>
-<td>这个方法是给定用户，在所有其它用户的正例里进行随机选择，因此难以保证负例的真实性和代表性</td>
+<td>这个方法是在一个训练batch里，在所有其它用户的正例里进行随机选择，因此难以保证负例的真实性和代表性</td>
 </tr>
 <tr>
 <td>曝光数据随机选择负例</td>

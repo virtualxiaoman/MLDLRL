@@ -70,9 +70,9 @@ html是markdown直接导出的，方便阅读。
 
 ## 3.部分大型的开源学习资源
 1. [Datawhale-github](https://github.com/datawhalechina)或者[Datawhale-官网](https://datawhale.cn/learn)
-好像都是免费，质量尚可，但是感觉最近更新的不过。
+好像都是免费，质量还挺不错的(但是因为显然每一章节的作者不相同，导致逻辑连贯性不够强、符号使用不太统一)，但是感觉最近更新的不多。
 2. [boyuai-github](https://github.com/boyu-ai)或者[boyuai-官网](https://www.boyuai.com)
-有付费内容，但是动手学系列都是免费的，但是动手学NLP,CV的没有。
+有付费内容，但是动手学系列都是免费的，但是动手学NLP,CV的不知道为什么没有电子书了。
 
 
 ## 4.视频

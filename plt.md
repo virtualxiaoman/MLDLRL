@@ -1,3 +1,6 @@
+参考：https://linklearner.com/learn/content/4/91
+官网：https://matplotlib.org/stable/users/index
+
 # 1.原理
 用`Artist`对象在画布`canvas`上绘制`Render`图形。
 - `matplotlib.backend_bases.FigureCanvas`绘图区，所有的图像都是在绘图区完成的

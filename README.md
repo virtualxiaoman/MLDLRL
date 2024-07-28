@@ -1,10 +1,11 @@
 PDF与Word的内容一般是一样的，但PDF可能落后一些版本，因为我懒得每次写完转PDF，但是PDF确实方便阅读。
+
 html是markdown直接导出的，方便阅读。
 
 以PDF为例，本笔记的整个结构与描述是：
 ```
 .
-├── 数学基础.pdf        [√]参考的鸢尾花书、雷明
+├── 数学基础.pdf        [√]主要是线代与概率论，参考的鸢尾花书、雷明
 ├── 数据分析-Code.pdf   [√]之前的练手的，能run，但是正在整理与重构中，请参考我的Easier_DataScience仓库
 ├── 机器学习.pdf        [正在更新]机器学习(含DL)的原理推导(一般不推导纯数学公式)
 ├── 推荐系统.md         [正在更新]推荐系统的一些原理
@@ -15,15 +16,18 @@ html是markdown直接导出的，方便阅读。
 ├── 数据处理-Code.pdf   [×]虽然数据处理很重要，但是我比较懒，还没翻新，而且也可以在Easier_DataScience中找到
 ```
 建议将**数学基础**当做查阅，
+
 **机器学习**的还是可以的(自认为)，
-**数据分析**请参考[更便捷的机器学习](https://github.com/virtualxiaoman/Easier_DataScience)(基本所有的机器学习、深度学习等的代码都会整合到里面去，形成统一而便捷的api调用或是demo)，
+
+**数据分析**的代码请参考[Easier_DataScience](https://github.com/virtualxiaoman/Easier_DataScience)(基本所有的机器学习、深度学习等的代码都会整合到里面去，形成统一而便捷的api调用或是demo)，
+
 **推荐系统**正在学习中。
 
 
 ## 1.最主要、最好的的参考资料与个人的一点推荐：
 1. [《鸢尾花书》](https://github.com/Visualize-ML) - 从加减乘除到机器学习
     - **推荐理由**：配图极其优秀，整体逻辑比较连贯，原理讲解很棒。
-    - **缺陷**：有些啰嗦，没办法速通，代码写的也是一坨。
+    - **缺陷**：有些啰嗦，没办法速通，代码写的也是一坨，甚至不肯格式化一下。
 2. [《动手学深度学习》](https://zh.d2l.ai/) - 面向中文读者的能运行、可讨论的深度学习教科书
     - **推荐理由**：深度学习实操，除了部分大一点的模型我的电脑太辣鸡直接爆显存之外，基本都能直接运行，而且原理的讲解确实牛逼，社区也不错。
     - **缺陷**：虽然是中文，但是很有机翻的感觉。什么都放在d2l.py里了，代码逻辑比较混乱，需要自己重构一部分代码，但是起码也算是我目前见过的代码写得比较好的了。
@@ -37,7 +41,9 @@ html是markdown直接导出的，方便阅读。
 
 ## 2.其余推荐资料 (我是动手学的狗)：
 **没**打○的就是我**没看过**，阿巴阿巴~
+
 中文社区的资料就这鬼样子，真的烂大街的我肯定不会放上来了。
+
 以下排名分先后（我没看的不算）：
 1. ○[AI数学笔记 Liang's Blog](https://wangliangster.github.io/#/) 
    ○[AI算法工程师手册 huaxiaozhuan](https://www.huaxiaozhuan.com/)
@@ -51,14 +57,14 @@ html是markdown直接导出的，方便阅读。
 3. ○[文亮-推荐系统技术原理与实践](https://www.epubit.com/bookDetails?id=UB831721e9d193a)
    - 有电子书(需要异步会员，但是异步会员可以通过已经购买了的纸质书兑换)，相当于半白嫖。
    - 整体讲解还可以，最好搭配[FunRec](https://datawhalechina.github.io/fun-rec/#/)一起看。
+4. ○[动手学NLP](https://github.com/boyu-ai/Hands-on-NLP)
+    - 无电子版(异步都没电子版)，买了纸质书，书挺好的，但我现在被劝退了，我不适合学NLP，感觉NLP的理论不美。
 4. ○[王晓华-从零开始大模型开发与微调：基于PyTorch与ChatGLM](http://www.tup.tsinghua.edu.cn/Wap/tsxqy.aspx?id=10334701)
     - 有电子版，付费，跟纸质版价格差不多。有[神秘链接](https://pan.baidu.com/s/1cY8htDmzXMIoJIan9aIWRw?pwd=fgyb)，但是要快手关注才能拿密码，我又没下。。。
     - 这本书不适合0基础，而是适合学了一点之后再看。其号称“通俗易懂”的原因是难的都不讲，都让读者“自行在网上查阅”。
     - 没有原理讲解，代码写的屎到不行而且有些感觉直接copy的连注释都是英文(我见过的最烂的)，唯一的优势是新且比较实用。
 3. [动手学CV](https://github.com/boyu-ai/Hands-on-CV)
    - 无电子版，而且github仓库都没建好，纸质书好像也没了，所以我没看
-4. [动手学NLP](https://github.com/boyu-ai/Hands-on-NLP)
-    - 无电子版，而且github仓库是个半成品，纸质书我还没买
 5. [动手学RL](https://github.com/boyu-ai/Hands-on-RL)
     - 有电子版，据说好
 6. [带注释的pytorch论文实现](https://nn.labml.ai/zh/)

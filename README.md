@@ -57,6 +57,7 @@ html是markdown直接导出的，方便阅读。
 3. ○[文亮-推荐系统技术原理与实践](https://www.epubit.com/bookDetails?id=UB831721e9d193a)
    - 有电子书(需要异步会员，但是异步会员可以通过已经购买了的纸质书兑换)，相当于半白嫖。
    - 整体讲解还可以，最好搭配[FunRec](https://datawhalechina.github.io/fun-rec/#/)一起看。
+   - 举例大部分是阿里巴巴的模型，难道阿里巴巴给他打钱了？
 4. ○[动手学NLP](https://github.com/boyu-ai/Hands-on-NLP)
     - 无电子版(异步都没电子版)，买了纸质书，书挺好的，但我现在被劝退了，我不适合学NLP，感觉NLP的理论不美。
 4. ○[王晓华-从零开始大模型开发与微调：基于PyTorch与ChatGLM](http://www.tup.tsinghua.edu.cn/Wap/tsxqy.aspx?id=10334701)

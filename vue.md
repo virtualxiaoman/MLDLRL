@@ -25,7 +25,7 @@ npm run dev
 还可以尝试从默认值`npm config set registry https://registry.npmjs.org/`改为`npm config set registry https://registry.npmmirror.com`设置淘宝镜像源。可以使用`npm config get registry`查看当前镜像源。
 - `npm`后面可以加上`--force`参数(强制安装)或者`--legacy-peer-deps`参数(忽略依赖检查)。
 
-4. **安装其他的依赖**：
+4. **安装其他的依赖(可选)**：
 ```bash
 npm install vue-router
 npm install pinia
@@ -50,10 +50,9 @@ https://blog.csdn.net/yqahx/article/details/119785262
 - 兄弟组件：通过`bus`传递。
 
 `ParentComponent.vue`:
-```javascript
+```html
 <template>
   <div>
-    <h1>父组件</h1>
     <p>父组件数据: {{ parentMessage }}</p>
     <ChildComponent :message="parentMessage" @updateMessage="updateParentMessage" />
   </div>
@@ -71,10 +70,9 @@ function updateParentMessage(newMessage) {
 </script>
 ```
 `ChildComponent.vue`:
-```javascript
+```html
 <template>
   <div>
-    <h2>子组件</h2>
     <p>从父组件接收到的数据: {{ message }}</p>
     <input v-model="childMessage" placeholder="更新父组件的数据" />
     <button @click="sendUpdate">更新父组件</button>
@@ -94,3 +92,34 @@ function sendUpdate() {
 }
 </script>
 ```
+上面的原理是：
+- `ChildComponent`通过`props`接收`ParentComponent`传递的数据，点击按钮后通过`emit`将数据传递给`ParentComponent`。
+
+细节是：
+- `:`表示传递数据，`@`表示接收数据。`v-model`是双向绑定，`@click`是点击事件。
+- 父组件里使用`:message`表示传递数据且变量名为`message`，子组件里使用`const props = defineProps(['message']);`表示接收数据且变量名为`message`。
+- 子组件里使用`const emit = defineEmits(['updateMessage']);`表示发送数据且事件名为`updateMessage`，父组件里使用`@updateMessage="updateParentMessage"`表示接收数据且事件名为`updateMessage`。
+
+
+# 2. Vue里渲染markdown
+
+1. **安装`marked`**：
+```bash
+npm install marked
+npm install marked @types/marked highlight.js
+npm install highlight.js
+npm install vue-markdown
+npm install github-markdown-css
+npm install katex
+npm install --save-dev @types/katex
+```
+其中`vue-markdown`依赖于`marked`和`highlight.js`。katex的第二个导入是为了在ts文件中使用katex。
+
+2. **导入**：
+```ts
+import {marked} from 'marked';
+import hljs from 'highlight.js';
+// import 'highlight.js/styles/github.css';
+import "github-markdown-css"
+```
+注意不是`import marked from 'marked';`，很多gpt都给错了。

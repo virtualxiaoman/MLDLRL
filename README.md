@@ -28,10 +28,10 @@ html是markdown直接导出的，方便阅读。
 1. [《鸢尾花书》](https://github.com/Visualize-ML) - 从加减乘除到机器学习
     - **推荐理由**：配图极其优秀，整体逻辑比较连贯，原理讲解很棒。
     - **缺陷**：有些啰嗦，没办法速通，代码写的也是一坨，甚至不肯格式化一下。
-2. [《动手学深度学习》](https://zh.d2l.ai/) - 面向中文读者的能运行、可讨论的深度学习教科书
+2. [《动手学深度学习》](https://zh.d2l.ai/) - 面向中文读者的能运行、可讨论的深度学习教科书，简称d2l
     - **推荐理由**：深度学习实操，除了部分大一点的模型我的电脑太辣鸡直接爆显存之外，基本都能直接运行，而且原理的讲解确实牛逼，社区也不错。
     - **缺陷**：虽然是中文，但是很有机翻的感觉。什么都放在d2l.py里了，代码逻辑比较混乱，需要自己重构一部分代码，但是起码也算是我目前见过的代码写得比较好的了。
-3. [Easier_DataScience](https://github.com/virtualxiaoman/Easier_DataScience) - [自荐]我写的一些便于MLDLRL的模块，希望调用的时候更方便
+3. [Easier_DataScience](https://github.com/virtualxiaoman/Easier_DataScience) - [自荐]我写的一些便于MLDL等AI相关的module或是一些demo，希望调用或复用的时候更方便
     - **推荐理由**：方便调用，不用每次都写一遍
     - **缺陷**：还在更新中，有些模块还没写完或者还没测试，部分代码逻辑可能不够清晰
 4. [雷明-机器学习的数学](https://www.epubit.com/bookDetails?id=UB7812edb26d3f9) - 机器学习的数学基础
@@ -45,39 +45,46 @@ html是markdown直接导出的，方便阅读。
 中文社区的资料就这鬼样子，真的烂大街的我肯定不会放上来了。
 
 以下排名分先后（我没看的不算）：
+1. ○[李宏毅深度学习教程 LeeDL Tutorial](https://github.com/datawhalechina/leedl-tutorial)
+    - 不是入门书，可以先看[d2l]((https://zh.d2l.ai/))再看这个。这个书提及了很多**细节**与问题，更多的是启发性思考，书中主要是讲解一些深度学习的原理，不过没有代码实现。
+    - 我的评价是神中神！
 1. ○[AI数学笔记 Liang's Blog](https://wangliangster.github.io/#/) 
    ○[AI算法工程师手册 huaxiaozhuan](https://www.huaxiaozhuan.com/)
-    - 比较难的公式推导都有，按需查阅。
+    - **比较难的公式推导都有**，按需查阅。
     - 感觉挺全面的。
 2. ○[动手学ML](https://github.com/boyu-ai/Hands-on-ML) 
     - 电子书，免费。
-    - 不是入门书，适合有一定基础的看。
+    - 不是入门书，**适合有一定基础**的看。
     - 部分公式存在严重错误，但是讲解还可以，需要有自己的判断能力。
     - 习题答案可以参考：[motewei](https://github.com/motewei/Hands-on-ML-solutions)
 3. ○[文亮-推荐系统技术原理与实践](https://www.epubit.com/bookDetails?id=UB831721e9d193a)
    - 有电子书(需要异步会员，但是异步会员可以通过已经购买了的纸质书兑换)，相当于半白嫖。
-   - 整体讲解还可以，最好搭配[FunRec](https://datawhalechina.github.io/fun-rec/#/)一起看。
+   - 整体**讲解还可以**，最好搭配[FunRec](https://datawhalechina.github.io/fun-rec/#/)一起看。
    - 举例大部分是阿里巴巴的模型，难道阿里巴巴给他打钱了？
 4. ○[动手学NLP](https://github.com/boyu-ai/Hands-on-NLP)
     - 无电子版(异步都没电子版)，买了纸质书，书挺好的，但我现在被劝退了，我不适合学NLP，感觉NLP的理论不美。
-4. ○[王晓华-从零开始大模型开发与微调：基于PyTorch与ChatGLM](http://www.tup.tsinghua.edu.cn/Wap/tsxqy.aspx?id=10334701)
+5. ○[王晓华-从零开始大模型开发与微调：基于PyTorch与ChatGLM](http://www.tup.tsinghua.edu.cn/Wap/tsxqy.aspx?id=10334701)
     - 有电子版，付费，跟纸质版价格差不多。有[神秘链接](https://pan.baidu.com/s/1cY8htDmzXMIoJIan9aIWRw?pwd=fgyb)，但是要快手关注才能拿密码，我又没下。。。
-    - 这本书不适合0基础，而是适合学了一点之后再看。其号称“通俗易懂”的原因是难的都不讲，都让读者“自行在网上查阅”。
+    - 这本书不适合0基础，而是适合学了一点之后再看。其号称“通俗易懂”的原因是**难的都不讲**，都让读者“自行在网上查阅”。
     - 没有原理讲解，代码写的屎到不行而且有些感觉直接copy的连注释都是英文(我见过的最烂的)，唯一的优势是新且比较实用。
-3. [动手学CV](https://github.com/boyu-ai/Hands-on-CV)
+6. [动手学CV](https://github.com/boyu-ai/Hands-on-CV)
    - 无电子版，而且github仓库都没建好，纸质书好像也没了，所以我没看
-5. [动手学RL](https://github.com/boyu-ai/Hands-on-RL)
+7. [动手学RL](https://github.com/boyu-ai/Hands-on-RL)
     - 有电子版，据说好
-6. [带注释的pytorch论文实现](https://nn.labml.ai/zh/)
+8. [带注释的pytorch论文实现](https://nn.labml.ai/zh/)
     - 个人感觉翻译得非常差，但是类似的其他资源还没找到更好的
-7. [强化学习导论](https://rl.qiwihui.com/zh-cn/latest/index.html)
-8. [人大LLM-Book](https://github.com/LLMBook-zh/LLMBook-zh.github.io)
+9. [强化学习导论](https://rl.qiwihui.com/zh-cn/latest/index.html)
+10. [人大LLM-Book](https://github.com/LLMBook-zh/LLMBook-zh.github.io)
     - 可下载阅读
+
+以下请避雷：
+1. 扩散原理从入门到实战-异步图书：**没有原理讲解**，我看完了还是一知半解的状态，代码是英文原版的机翻。另外其实这是个[开源的书](https://huggingface.co/datasets/HuggingFace-CN-community/Diffusion-book-cn)，感觉不如看[这个开源资料](https://github.com/yangqy1110/Diffusion-Models/tree/main)。
+2. 自动机器学习入门与实践-华中科技大学出版社：**没有原理讲解**，大部分是ML而非autoML，代码就是英文原版的一个字都没改。
 
 
 ## 3.部分大型的开源学习资源
 1. [Datawhale-github](https://github.com/datawhalechina)或者[Datawhale-官网](https://datawhale.cn/learn)
-好像都是免费，质量还挺不错的(但是因为显然每一章节的作者不相同，导致逻辑连贯性不够强、符号使用不太统一)，但是感觉最近更新的不多。
+好像都是免费，质量还挺不错的(但是因为显然每一章节的作者不相同，导致逻辑连贯性不够强、符号使用不太统一)，但是感觉最近更新的不多。整体来说，我觉得Datawhale的质量还是比较高的，并且有些教程确实是**独一无二**的，比如plt的我就没在其他地方看到研究得这么细致的。
 2. [boyuai-github](https://github.com/boyu-ai)或者[boyuai-官网](https://www.boyuai.com)
 有付费内容，但是动手学系列都是免费的，但是动手学NLP,CV的不知道为什么没有电子书了。
 
@@ -85,7 +92,7 @@ html是markdown直接导出的，方便阅读。
 ## 4.视频
 1. [B站-这是我已经看完了的视频教程的一个收藏夹](https://space.bilibili.com/506925078/favlist?fid=2648566378)
 主要包括：
-- [BV1T84y167U9](https://www.bilibili.com/video/BV1T84y167U9/)  机器学习(传统的机器学习算法基本都有)。虽然我不推荐看唐宇迪的视频来学机器学习，但是他的视频确实简单，拿个二倍速过一遍就行。
+- [BV1T84y167U9](https://www.bilibili.com/video/BV1T84y167U9/)  机器学习(传统的机器学习算法基本都有)。虽然我不推荐看唐宇迪的视频来学机器学习，但是他的视频确实简单，拿个二倍速过一遍当**入门**就行。
 - [BV1RT411G7jJ](https://www.bilibili.com/video/BV1RT411G7jJ)  机器学习(侧重统计学习)。内容不是很多，但是讲的都很好
 - [BV15V411W7VB](https://www.bilibili.com/video/BV15V411W7VB/)  机器学习(侧重神经网络)。跟上面一个一样，内容讲的很不错，能启发思考。
 
@@ -102,7 +109,7 @@ html是markdown直接导出的，方便阅读。
 | [动手学ML](https://github.com/boyu-ai/Hands-on-ML) |7| ★★★☆☆  | ★★★☆☆ | ★★★★☆ | ★★★☆☆ |★★★☆☆ |
 | [BV1T84y167U9](https://www.bilibili.com/video/BV1T84y167U9/) | 5| ★★★★☆  | ★★★★☆ | ★★☆☆☆ | ★☆☆☆☆ |★★★☆☆ |
 
-评分十分主观，仅供参考，应当根据自己的学习目的与风格选择适合自己的学习资料。
+以上是我觉得还不错的资料的评分。评分十分主观，仅供参考，应当根据自己的学习**目的与风格**选择适合自己的学习资料。
 
 [^1]: 整体印象是我的主观感受。
 [^2]: 阅读舒适度是能不能让人有继续阅读的冲动。

@@ -50,3 +50,12 @@
   - 解决方法：
     - `git pull origin main --allow-unrelated-histories`
     - 然后在vscode里可以看到冲突的文件(带有红色感叹号)，手动解决冲突(选择保留哪个版本)后再正常提交即可。
+
+- `error: failed to push some refs to '
+  - 解决方法：
+    - 一般是因为开了代理，使用下面的代码设置代理。请注意，IP和端口号根据自己的代理设置进行修改，`clash`默认端口号是`7890`：
+```bash
+git config --global http.proxy http://127.0.0.1:7890 
+git config --global https.proxy http://127.0.0.1:7890
+```
+

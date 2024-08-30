@@ -3,11 +3,12 @@
 
 1. **安装`vue`**：
 ```bash
-npm install -g @vitejs/create-vite
 npm install vue
+npm install -g @vitejs/create-vite
 ```
-- 第一句是安装`vite`脚手架工具，`-g`表示全局安装。
-- 第二句是安装`vue`，`vue`是`vite`的依赖。
+- 第一句是安装`vue`，`vue`是`vite`的依赖。
+- 第二句是安装`vite`脚手架工具，`-g`表示全局安装(该命令可选)。
+
 
 2. **创建名为`vue_front`的项目**：
 ```bash
@@ -21,7 +22,7 @@ cd vue_front
 npm install
 npm run dev
 ```
-- `npm install`卡住时，可以尝试`npm cache clean --force`，然后再次`npm install`。
+- `npm install`卡住时或者报错`npm error code E404`，可以尝试`npm cache clean --force`，然后再次`npm install`。
 还可以尝试从默认值`npm config set registry https://registry.npmjs.org/`改为`npm config set registry https://registry.npmmirror.com`设置淘宝镜像源。可以使用`npm config get registry`查看当前镜像源。
 - `npm`后面可以加上`--force`参数(强制安装)或者`--legacy-peer-deps`参数(忽略依赖检查)。
 
@@ -36,10 +37,9 @@ npm install -D sass sass-loader
 - 这五个的功能分别是：路由、状态管理、网络请求、UI库、样式处理。
 
 
--1. 参考资料：
-https://blog.csdn.net/weixin_38898884/article/details/139456620
-
-https://blog.csdn.net/yqahx/article/details/119785262
+5. 参考资料：
+- https://blog.csdn.net/weixin_38898884/article/details/139456620
+- https://blog.csdn.net/yqahx/article/details/119785262
 
 
 ## 1.2. Usage
@@ -123,3 +123,36 @@ import hljs from 'highlight.js';
 import "github-markdown-css"
 ```
 注意不是`import marked from 'marked';`，很多gpt都给错了。
+
+# 3. 服务器部署
+`https://free.aliyun.com/?spm=5176.28623341`领取阿里云服务器。
+`https://ecs.console.aliyun.com/server/i-bp1ddbura4iyenuwu8r6/detail?regionId=cn-hangzhou#/`进入阿里云服务器控制台。
+`https://ecs-workbench.aliyun.com/?spm=5176.ecscore_server.0.0.43aa4df5Ps5W6S&form=EcsConsole&instanceType=ecs&regionId=cn-hangzhou&instanceId=i-bp1ddbura4iyenuwu8r6&resourceGroupId=&language=zh`进入阿里云工作台。
+输入以下命令
+```bash
+ssh root@120.55.80.92
+sudo yum update -y
+sudo yum install nginx -y
+sudo yum install mysql-server -y
+sudo yum install php-fpm php-mysqlnd -y
+```
+每一句命令对应的意思是：
+- 连接到服务器，这里使用的ip是公网ip。
+- 更新服务器。
+- 安装nginx。
+- 安装mysql。
+- 安装php。
+
+```bash
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl start mysqld
+sudo systemctl enable mysqld
+sudo systemctl start php-fpm
+sudo systemctl enable php-fpm
+```
+这些命令的意思是：启动nginx、mysql、php，并且设置开机自启动。
+`https://wanwang.aliyun.com/domain/searchresult/?domainCartTradeParams=dr_29379033_1724916831878&spm=5176.29379033.J_fUNSUVBzhRP-3yTOu3xXF.domain-just-search&keyword=azusa&suffix=.net.cn`域名采购。
+
+- https://blog.csdn.net/weixin_45572139/article/details/106085232
+- https://blog.csdn.net/weixin_47540834/article/details/138138655

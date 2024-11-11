@@ -2,8 +2,32 @@ Hello！这是我的学习笔记，主要是ML、DL、RL、CV、NLP、RS等AI相
 
 - PDF与Word的内容一般是一样的，但PDF可能落后一些版本，因为我懒得每次写完转PDF，可以下载word后自行转为PDF。
 - html是markdown直接导出的，方便阅读，未来可能上线**在线阅读版**，目前已经能在本地阅读了，我还没买服务器，所以暂时没法在线阅读。
-现已将仓库里的部分html文件删除了，如果需要可以查看`Sep 13, 2024`的`95515f535d8721fd4e997397628f643faf426116`这个commit以及之前的版本。因为md转PDF的时候用html作为中转站的话CSS不容易丢失，所以留存了部分html，html转PDF的代码在[easier_tools/html2pdf.py](https://github.com/virtualxiaoman/Easier_DataScience/blob/master/easier_tools/html2pdf.py)中。
+~~现已将仓库里的部分html文件删除了，如果需要可以查看`Sep 13, 2024`的`95515f535d8721fd4e997397628f643faf426116`这个commit以及之前的版本。因为md转PDF的时候用html作为中转站的话CSS不容易丢失，所以留存了部分html，html转PDF的代码在[easier_tools/html2pdf.py](https://github.com/virtualxiaoman/Easier_DataScience/blob/master/easier_tools/html2pdf.py)中。~~ 建议使用Typora。
 
+md内统一使用的语法有：
+```
+小标题：
+<p style="color:#EC407A; font-weight:bold">1. 小标题</p>
+
+图片：
+<div style="display: flex; justify-content: center; align-items: center;">
+    <div style="text-align: center;">
+        <img src="assets/···/···/···.png" style="width: 60%;"/>
+        <p style="font-size: small; color: gray;">HOG</p>
+    </div>
+</div>
+
+代码：
+<div style="display: flex; justify-content: center; align-items: center;">
+<div style=" max-height: 200px; max-width: 90%; overflow-y: auto; border: 1px solid #39c5bb; border-radius: 10px;">
+
+```python
+很长的一段代码
+```
+</div>
+</div>
+
+```
 
 以PDF、md为例，本笔记的整个结构与描述是：
 ```

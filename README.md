@@ -13,14 +13,13 @@ md内统一使用的语法有：
 <div style="display: flex; justify-content: center; align-items: center;">
     <div style="text-align: center;">
         <img src="assets/···/···/···.png" style="width: 60%;"/>
-        <p style="font-size: small; color: gray;">HOG</p>
+        <p style="font-size: small; color: gray;">注释</p>
     </div>
 </div>
 
 代码：
 <div style="display: flex; justify-content: center; align-items: center;">
 <div style=" max-height: 200px; max-width: 90%; overflow-y: auto; border: 1px solid #39c5bb; border-radius: 10px;">
-
 ```python
 很长的一段代码
 ```

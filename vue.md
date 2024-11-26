@@ -37,7 +37,27 @@ npm install -D sass sass-loader
 - 这五个的功能分别是：路由、状态管理、网络请求、UI库、样式处理。
 
 
-5. 参考资料：
+5. 连接到githubpage
+- 安装`gh-pages`：
+```bash
+npm install gh-pages --save-dev
+```
+- 在`package.json`中添加：
+```json
+"scripts": {
+  "deploy": "gh-pages -d dist"
+}
+```
+- 打包与部署
+```bash
+npm run build
+npm run deploy
+```
+- 打开 GitHub 仓库的 Settings > Pages，如：https://github.com/virtualxiaoman/blog/settings/pages
+在 `Source` 部分选择 `gh-pages` 分支，并点击保存。
+
+
+6. 参考资料：
 - https://blog.csdn.net/weixin_38898884/article/details/139456620
 - https://blog.csdn.net/yqahx/article/details/119785262
 

@@ -6,7 +6,7 @@ Hello！这是我的学习笔记，主要是ML、DL、RL、CV、NLP、RS等AI相
 
 <div style="display: none;">
 
-md内统一使用的语法有(该部分设为隐藏属性)：
+md内统一使用的语法有(该div设为了隐藏属性，因为方便我自己查阅，但是github似乎并不支持div隐藏)：
 
 小标题：
 <p style="color:#EC407A; font-weight:bold">1. 小标题</p>

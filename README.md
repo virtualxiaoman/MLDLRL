@@ -1,63 +1,27 @@
 Hello！这是我的学习笔记，主要是ML、DL、RL、CV、NLP、RS等AI相关的内容。笔记的仓库**可以直接下载下来看，无需经由我同意**。但是**请不要用于学习之外的用途**（比如不标注出处的转载、商业用途、大篇幅抄袭等），少量引用可以不注明出处，引用多了还是希望能注明出处是`virtual小满  https://github.com/virtualxiaoman/MLDLRL`。
 
+---
+
 - PDF与Word的内容一般是一样的，但PDF可能落后一些版本，因为我懒得每次写完转PDF，可以下载word后自行转为PDF。
 - 已经上线**在线阅读版**，可见https://virtualxiaoman.github.io/blog/
 
 
-<div style="display: none;">
+---
 
-md内统一使用的语法有(该div设为了隐藏属性，因为方便我自己查阅，但是github似乎并不支持div隐藏)：
-
-小标题：
-<p style="color:#EC407A; font-weight:bold">1. 小标题</p>
-
-图片：
-<div style="display: flex; justify-content: center; align-items: center;">
-    <div style="text-align: center;">
-        <img src="assets/···/···/···.png" style="width: 60%;"/>
-        <p style="font-size: small; color: gray;">注释</p>
-    </div>
-</div>
-
-代码：
-
-<div style="display: flex; justify-content: center; align-items: center;">
-<div style=" max-height: 200px; max-width: 90%; overflow-y: auto; border: 1px solid #39c5bb; border-radius: 10px;">
-```python
-很长的一段代码
+比较推荐查看：
+```
+├── 数学基础.pdf        [√]可以作为查阅。主要是线代与概率论，参考的鸢尾花书、雷明
+├── 机器学习.pdf        [√]偏基础，初学时记录的笔记。机器学习(含DL)的原理推导(一般不推导纯数学公式)，偏简单
+├── 机器学习.md         [正在更新]重写.docx文档，更加深入去了解原理与算法，偏向总结与动手算，后续还会加入项目实践
+├── 深度学习.md         [正在更新]对深度学习的一些总结，不太基础。
 ```
 
+**数据分析**的代码请参考[Easier_DataScience](https://github.com/virtualxiaoman/Easier_DataScience)(基本所有的机器学习、深度学习等的代码都会整合到里面去，形成统一而便捷的api调用或是demo，当然估计也不会有人用，哈哈哈；当然里面也有很多demo实践，可以从笔记的link里跳转过去)。
 
-</div>
-</div>
 
-</div>
+---
 
-以PDF、md为例，本笔记的整个结构与描述是：
-```
-.
-├── 数学基础.pdf        [√]主要是线代与概率论，参考的鸢尾花书、雷明
-├── 数据分析-Code.pdf   [√]之前的练手的，能run，但是正在整理与重构中，请参考我的Easier_DataScience仓库
-├── 机器学习.pdf        [正在更新]机器学习(含DL)的原理推导(一般不推导纯数学公式)
-├── 深度学习.md         [正在更新]对深度学习的一些总结，正在机器学习.pdf中迁移出来
-├── 推荐系统.md         [暂缓更新]
-├── 扩散模型.md         [暂缓更新]
-├── 自然语言处理.md     [暂缓更新]
-├── LaTex.md           [偶尔更新]
-├── git.md             [偶尔更新]
-├── 代码基础.pdf        [×]刚学的时候记录的，还没翻新，逻辑可能混乱
-├── 数据处理-Code.pdf   [×]虽然数据处理很重要，但是我比较懒，还没翻新，而且也可以在Easier_DataScience中找到
-```
-建议将**数学基础**当做查阅；
-
-**机器学习**的还是可以的(自认为)，算是比较基础的，因为当初学的时候也是从这个开始的；
-
-**数据分析**的代码请参考[Easier_DataScience](https://github.com/virtualxiaoman/Easier_DataScience)(基本所有的机器学习、深度学习等的代码都会整合到里面去，形成统一而便捷的api调用或是demo)；
-
-**深度学习**是我自己的一些总结，正在持续更新中，不过可能不适合初学者，初学可以看下文的推荐资料；
-
-**推荐系统**、**扩散模型**、**自然语言处理**只是浅浅学了一点。
-
+推荐资料：
 
 ## 1.最主要、最好的的参考资料与个人的一点推荐
 1. [《鸢尾花书》](https://github.com/Visualize-ML) - 从加减乘除到机器学习
@@ -138,7 +102,7 @@ md内统一使用的语法有(该div设为了隐藏属性，因为方便我自�
 
 ## 5.对于我阅读较久的书籍&视频的一些打分
 
-| 书籍 | 整体印象[^1] | 阅读舒适度[^2] | 实用性[^3] | 逻辑性[^4] | 启发性[^5] | 语言[^6] |
+| 书籍 | 整体印象 | 阅读舒适度 | 实用性 | 逻辑性 | 启发性 | 语言 |
 |------|---------|-----------|-------|--------|-------|-------------------------------|
 | [《动手学深度学习》](https://zh.d2l.ai/)|9| ★★★★★  | ★★★★☆ | ★★★★☆ | ★★★★☆ |★★★☆☆|
 |  [李宏毅深度学习教程 LeeDL Tutorial](https://github.com/datawhalechina/leedl-tutorial) |9| ★★★★★ | ★★★☆☆ | ★★★★☆ | ★★★★★ |★★★☆☆ |
@@ -149,11 +113,40 @@ md内统一使用的语法有(该div设为了隐藏属性，因为方便我自�
 
 以上是我觉得还不错的资料的评分。评分十分主观，仅供参考，应当根据自己的学习**目的与风格**选择适合自己的学习资料。
 
-[^1]: 整体印象是我的主观感受。
-[^2]: 阅读舒适度是能不能让人有继续阅读的冲动。
-[^3]: 实用性主要是看代码写的好不好。
-[^4]: 逻辑性主要看作者的思维。
-[^5]: 启发性主要看作者能否给我带来启发。
-[^6]: 语言是指作者的语言表达能力，不是指代码的语言。包括：是否是母语或者翻译得是否是个正常人、描述是否清晰、用词是否准确。
+- 整体印象是我的主观感受。
+- 阅读舒适度是能不能让人有继续阅读的冲动。
+- 实用性主要是看代码写的好不好。
+- 逻辑性主要看作者的思维。
+- 启发性主要看作者能否给我带来启发。
+- 语言是指作者的语言表达能力，不是指代码的语言。包括：是否是母语或者翻译得是否是个正常人、描述是否清晰、用词是否准确。
 
 
+
+<div style="display: none;">
+
+md内统一使用的语法有(该div设为了隐藏属性，因为方便我自己查阅，但是github界面似乎并不支持div隐藏)：
+
+小标题：
+<p style="color:#EC407A; font-weight:bold">1. 小标题</p>
+
+图片：
+<div style="display: flex; justify-content: center; align-items: center;">
+    <div style="text-align: center;">
+        <img src="assets/···/···/···.png" style="width: 60%;"/>
+        <p style="font-size: small; color: gray;">注释</p>
+    </div>
+</div>
+
+代码：
+
+<div style="display: flex; justify-content: center; align-items: center;">
+<div style=" max-height: 200px; max-width: 90%; overflow-y: auto; border: 1px solid #39c5bb; border-radius: 10px;">
+```python
+很长的一段代码
+```
+
+
+</div>
+</div>
+
+</div>

@@ -2,23 +2,30 @@ Hello！这是我的学习笔记，主要是ML、DL、RL、CV、NLP、RS等AI相
 
 ---
 
-- PDF与Word的内容一般是一样的，但PDF可能落后一些版本，因为我懒得每次写完转PDF，可以下载word后自行转为PDF。
-- 已经上线**在线阅读版**，可见https://virtualxiaoman.github.io/blog/
-
+Attention！ 已经上线**在线阅读版**，可见https://virtualxiaoman.github.io/blog/
 
 ---
 
 比较推荐查看：
 ```
-├── 数学基础.pdf        [√]可以作为查阅。主要是线代与概率论，参考的鸢尾花书、雷明
-├── 机器学习.pdf        [√]偏基础，初学时记录的笔记。机器学习(含DL)的原理推导(一般不推导纯数学公式)，偏简单
+├── 数学基础.pdf        [√]可以作为查阅。主要是线代与概率论，参考的鸢尾花书、雷明。未来可能重构与更新（可能考研之后吧）
 ├── 机器学习.md         [正在更新]重写.docx文档，更加深入去了解原理与算法，偏向总结与动手算，后续还会加入项目实践
 ├── 深度学习.md         [正在更新]对深度学习的一些总结，不太基础。
 ```
 
-**数据分析**的代码请参考[Easier_DataScience](https://github.com/virtualxiaoman/Easier_DataScience)(基本所有的机器学习、深度学习等的代码都会整合到里面去，形成统一而便捷的api调用或是demo，当然估计也不会有人用，哈哈哈；当然里面也有很多demo实践，可以从笔记的link里跳转过去)。
+**数据分析**的代码请参考[Easier_DataScience](https://github.com/virtualxiaoman/Easier_DataScience)(基本所有的机器学习、深度学习等的代码都会整合到里面去，形成统一而便捷的api调用或是demo，当然估计也不会有人用，哈哈哈；当然里面也有很多demo实践，从笔记的link里跳转过去就行了)。
 
+文件夹说明：
+```
+├── assets              [√]存放图片
+├── 以前的笔记           [√]存放以前的笔记，不再更新，也不是很推荐查看（比较简单）
+├── 导出的PDF            [√]markdown或者word转为PDF的文件，markdown的主题使用latex
+├── 零散东西的笔记       [正在更新]存放一些小笔记
+├── 其余笔记             [正在更新]markdown的笔记是最新的，也是最推荐查看的。word是去年写的了，偏向应试。
+```
 
+---
+---
 ---
 
 推荐资料：
@@ -125,7 +132,7 @@ Hello！这是我的学习笔记，主要是ML、DL、RL、CV、NLP、RS等AI相
 
 <div style="display: none;">
 
-md内统一使用的语法有(该div我设为了隐藏属性，因为方便我自己查阅以标准化md格式，但是github界面似乎并不支持div隐藏)：
+md内统一使用的语法有(该div我设为了隐藏属性，因为方便我自己查阅以标准化md格式，但是github界面似乎并不支持div隐藏，阿巴阿巴)：
 
 小标题：
 <p style="color:#EC407A; font-weight:bold">1. 小标题</p>

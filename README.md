@@ -149,10 +149,10 @@ md内统一使用的语法有(该div我设为了隐藏属性，因为方便我�
 
 <div style="display: flex; justify-content: center; align-items: center;">
 <div style=" max-height: 200px; max-width: 90%; overflow-y: auto; border: 1px solid #39c5bb; border-radius: 10px;">
+
 ```python
 很长的一段代码
 ```
-
 
 </div>
 </div>

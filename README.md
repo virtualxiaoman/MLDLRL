@@ -4,7 +4,7 @@ Hello！这是我的学习笔记，主要是ML、DL、RL、CV、NLP、RS等AI相
 
 Attention！ 已经上线**在线阅读版**，可见https://virtualxiaoman.github.io/blog/
 
-你也可以参考：https://github.com/virtualxiaoman/blog 来自行构建本地阅读版。当然，使用typora，vscode等markdown编辑器也能正常阅读。typora使用latex主题模版效果更佳。
+你也可以参考：https://github.com/virtualxiaoman/blog 来自行构建本地阅读版。当然，使用typora，vscode等markdown编辑器也能正常阅读。typora使用[latex主题](https://github.com/Keldos-Li/typora-latex-theme)的模版时，阅读效果更佳。
 
 ---
 

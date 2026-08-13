@@ -149,6 +149,37 @@ md内统一使用的语法有(该div我设为了隐藏属性，因为方便我�
     </div>
 </div>
 
+多图：
+
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+    <div style="display: flex; flex-direction: column; align-items: center; flex: 0 1 45%; min-width: 200px;">
+        <img src="assets/.../.../....png" style="width: 100%; height: auto; max-width: 500px;" alt="图1">
+        <p style="text-align: center; margin-top: 8px; font-size: 14px; color: #333;">
+            注释1
+        </p>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; flex: 0 1 45%; min-width: 200px;">
+        <img src="assets/.../.../....png" style="width: 100%; height: auto; max-width: 500px;" alt="图2">
+        <p style="text-align: center; margin-top: 8px; font-size: 14px; color: #333;">
+            注释2，
+            <a href="https://arxiv.org/abs/..." target="_blank">论文名称</a>
+        </p>
+    </div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <img src="assets/.../.../....png" width="45%">
+        <img src="assets/.../.../....png" width="45%"> 
+    </div>
+    <p style="text-align: center; max-width: 800px; margin-top: 10px;">
+        单个注释
+        <a href="https://arxiv.org/abs/...">论文名称</a>
+    </p>
+</div>
+
+
+
 代码：
 
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -162,3 +193,11 @@ md内统一使用的语法有(该div我设为了隐藏属性，因为方便我�
 </div>
 
 </div>
+
+使用$\displaystyle$可以强制在行内公式中使用显示模式使其像$$$$一样形式。
+
+
+typora导出markdown为PDF的格式设置如下：
+页首：${title}-virtual小满
+页尾：No. ${pageNo} / ${totalPages}
+作者：virtual小满

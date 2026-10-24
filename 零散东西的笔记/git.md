@@ -41,6 +41,45 @@
 
 </br>
 
+
+fork：
+```bash
+git clone https://github.com/virtualxiaoman/GPT-SoVITS.git
+Administrator@xm-pc MINGW64 /g/Projects/github
+$ git clone https://github.com/virtualxiaoman/GPT-SoVITS.git
+Cloning into 'GPT-SoVITS'...
+remote: Enumerating objects: 5540, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 5540 (delta 3), reused 2 (delta 2), pack-reused 5521 (from 2)
+Receiving objects: 100% (5540/5540), 14.07 MiB | 4.12 MiB/s, done.
+Resolving deltas: 100% (3118/3118), done.
+
+Administrator@xm-pc MINGW64 /g/Projects/github
+$ git remote -v
+fatal: not a git repository (or any of the parent directories): .git
+
+Administrator@xm-pc MINGW64 /g/Projects/github
+$ cd GPT-SoVITS
+
+Administrator@xm-pc MINGW64 /g/Projects/github/GPT-SoVITS (main)
+$ git remote -v
+origin  https://github.com/virtualxiaoman/GPT-SoVITS.git (fetch)
+origin  https://github.com/virtualxiaoman/GPT-SoVITS.git (push)
+
+Administrator@xm-pc MINGW64 /g/Projects/github/GPT-SoVITS (main)
+$ git remote add upstream https://github.com/RVC-Boss/GPT-SoVITS.git
+
+Administrator@xm-pc MINGW64 /g/Projects/github/GPT-SoVITS (main)
+$ git remote -v
+origin  https://github.com/virtualxiaoman/GPT-SoVITS.git (fetch)
+origin  https://github.com/virtualxiaoman/GPT-SoVITS.git (push)
+upstream        https://github.com/RVC-Boss/GPT-SoVITS.git (fetch)
+upstream        https://github.com/RVC-Boss/GPT-SoVITS.git (push)
+```
+
+
+
 <h3>git常见报错：</h3>
 
 - `fatal: unable to access 'https://github.com/*****': HTTP/2 stream 1 was not closed cleanly before end of the underlying stream`：
